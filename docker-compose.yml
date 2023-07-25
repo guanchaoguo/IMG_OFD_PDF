@@ -1,0 +1,13 @@
+version: '3'
+services:
+  spring-boot-application:
+    container_name: spring-boot-application
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    ports:
+      - "8000:8000"
+#    command: ["/bin/sh","-c","sleep 300000"]
+#    command: ["java","-jar" ,"-Dspring.profiles.active=prod", "-Duser.timezone=Asia/Shanghai","/app/dataExChangePlatform-0.0.1-SNAPSHOT.jar"]
+

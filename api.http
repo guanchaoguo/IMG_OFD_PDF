@@ -1,0 +1,32 @@
+####  IMG 转 ODF
+POST http://localhost:8080/api/v1/converter
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="files"; filename="转换结果.svg"
+Content-Type: multipart/form-data
+
+< /Users/jimogangdan/IdeaProjects/ofd_pdf/src/test/resources/转换结果.svg
+--WebAppBoundary--
+
+
+--WebAppBoundary
+Content-Disposition: form-data; name="files"; filename="转换结果截图.jpg"
+Content-Type: multipart/form-data
+
+< /Users/jimogangdan/IdeaProjects/ofd_pdf/src/test/resources/转换结果截图.jpg
+--WebAppBoundary--
+
+
+####  ODF 转 PDF
+POST http://localhost:8080/api/v1/restore
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="aa.ofd"
+Content-Type: multipart/form-data
+
+< /Users/jimogangdan/IdeaProjects/ofd_pdf/src/test/resources/aa.ofd
+--WebAppBoundary--
+
+
